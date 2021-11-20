@@ -1,0 +1,12 @@
+#!/bin/bash
+if [ "$1" = "-" ]
+then
+    arg1="-"
+    interactive="-i "
+else
+    arg1=`realpath $1`
+    interactive=""
+fi
+arg2=`realpath $2`
+dir=`dirname ${arg2}`
+docker run --rm -v "${dir}/:${dir}" ${interactive} pt ipf ${arg1} ${arg2} 
