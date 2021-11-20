@@ -8,5 +8,5 @@ catch () {
 }
 
 # usage: pf source-file grammar-file
-pdir=~/quicklisp/local-projects/pfr
+pdir=/app/pfr
 node $pdir/pf.js $1 $2
